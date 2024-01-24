@@ -78,6 +78,8 @@
  * Reset Styels
  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800,900|Poppins:300,400,500,600,700,700i&amp;display=swap");
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -15031,6 +15033,7 @@ ul.nav.tab-style--1 li a.active::before {
 -------------------------*/
 .single-tab-content {
   padding-top: 20px;
+  text-align: left;
 }
 
 .single-tab-content p {
@@ -16646,7 +16649,7 @@ BLog Details Styles
 
 .about-inner .section-title p.description {
   font-weight: 300;
-  color: #3e3535;
+  color: #000000;
   padding: 0;
 }
 
@@ -17940,7 +17943,8 @@ a.purchase-btn:hover {
 .active-dark-mode .single-tab-content ul li,
 .active-dark-mode .single-service.service__style--2 .content p,
 .active-dark-mode .single-service.service__style--4 .content p {
-  color: rgba(198, 201, 216, 0.75);
+  /* color: rgba(198, 201, 216, 0.75); */
+  color: rgb(255 255 255 / 90%);
 }
 
 .active-dark-mode [data-black-overlay]:before {

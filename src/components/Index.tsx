@@ -1,9 +1,14 @@
-import * as React from 'react';
+import React,{useState} from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import ModalVideo from 'react-modal-video'
 
 interface IAppProps {
 }
 
 const App: React.FunctionComponent<IAppProps> = (props) => {
+    const [isOpen, setOpen] = useState(false)
+
   return (<>
    <div className="page-wrapper">
             
@@ -394,8 +399,9 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                                 <div className="rn-progress-charts">
                                     <h6 className="heading heading-h6">Frontend / Design</h6>
                                     <div className="progress">
-                                        {/* <div className="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style={{width: "90%"}} aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span
-                                                className="percent-label">90%</span></div> */}
+                                
+                                        <div className="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style={{width: "90%"}} ><span
+                                                className="percent-label">90%</span></div>
                                     </div>
                                 </div>
                                 
@@ -405,28 +411,28 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                                 <div className="rn-progress-charts custom-color--2 mt--40">
                                     <h6 className="heading heading-h6">Backend</h6>
                                     <div className="progress">
-                                        {/* <div className="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style={{width: "85%"}} aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
-                                                className="percent-label">85%</span></div> */}
+                                        <div className="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style={{width: "85%"}} ><span
+                                                className="percent-label">85%</span></div>
                                     </div>
                                 </div>
                                 
 
-                                
+{/*                                 
                                 <div className="rn-progress-charts custom-color--3 mt--40">
                                     <h6 className="heading heading-h6">Programming</h6>
                                     <div className="progress">
-                                        {/* <div className="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".8s" role="progressbar" style={{width: "80%"}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span
-                                                className="percent-label">80%</span></div> */}
+                                        <div className="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".8s" role="progressbar" style={{width: "80%"}} ><span
+                                                className="percent-label">80%</span></div>
                                     </div>
                                 </div>
-                                
+                                 */}
 
                                 
                                 <div className="rn-progress-charts custom-color--4 mt--40">
                                     <h6 className="heading heading-h6">Server</h6>
                                     <div className="progress">
-                                        {/* <div className="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".9s" role="progressbar" style={{width: "70%"}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span
-                                                className="percent-label">70%</span></div> */}
+                                        <div className="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".9s" role="progressbar" style={{width: "70%"}}  ><span
+                                                className="percent-label">70%</span></div>
                                     </div>
                                 </div>
                                 
@@ -457,8 +463,10 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                             
                             <div className="col-lg-4 col-md-6 col-12">
                                 <div className="thumbnail position-relative">
+                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
+
                                     <img className="w-100" src="https://rainbowit.net/html/trydo/assets/images/portfolio/portfolio-big-01.jpg" alt="About Images"/>
-                                    <a className="video-popup position-top-center play__btn size-medium" href="https://www.youtube.com/watch?v=ctsT5Y-InqE&amp;ab_channel=Rainbow-Themes"><span className="play-icon"></span></a>
+                                    <a className="video-popup position-top-center play__btn size-medium" href="#" onClick={()=> setOpen(true)}><span className="play-icon"></span></a>
                                 </div>
                                 <div className="content">
                                     <div className="inner">
@@ -655,7 +663,7 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                             </div>
                             <div className="col-lg-6 order-1 order-lg-2">
                                 <div className="thumbnail mb_md--30 mb_sm--30">
-                                    <img src="assets/images/about/about-piyush.png" width="450px" alt="trydo" />
+                                    <img src="assets/images/about/about-piyush.png" width="600px" height="600px" alt="trydo" />
                                 </div>
                             </div>
                         </div>
