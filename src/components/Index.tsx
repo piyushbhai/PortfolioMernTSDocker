@@ -2,6 +2,20 @@ import React,{useState} from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ModalVideo from 'react-modal-video'
+import Modal from 'react-modal';
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+//   Modal.setAppElement('#yourAppElement');
 
 interface IAppProps {
 }
@@ -10,6 +24,19 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
     const [isOpen, setOpen] = useState(false)
 
   return (<>
+  
+  {/* <ModalVideo channel='youtube' isOpen={isOpen}  videoId="PLkaTl15B255crc2ojToWqWLyCrCg63MyE" onClose={() => setOpen(false)} /> */}
+
+  <Modal
+        isOpen={isOpen}
+        // onAfterOpen={afterOpenModal}
+        // onRequestClose={isOpen}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <iframe width="960" height="400" src="https://www.youtube.com/embed/videoseries?si=EtauhEZLBFoGfl6A&amp;list=PLkaTl15B255crc2ojToWqWLyCrCg63MyE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+      </Modal>
+
    <div className="page-wrapper">
             
             <div className="rn-slider-area" id="home">
@@ -456,17 +483,16 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                         </div>
                     </div>
                 </div>
-
+                
                 <div className="rn-video-popup-area rn-section-gap bg_color--1">
                     <div className="container">
                         <div className="row">
                             
                             <div className="col-lg-4 col-md-6 col-12">
                                 <div className="thumbnail position-relative">
-                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
-
+                              
                                     <img className="w-100" src="https://rainbowit.net/html/trydo/assets/images/portfolio/portfolio-big-01.jpg" alt="About Images"/>
-                                    <a className="video-popup position-top-center play__btn size-medium" href="#" onClick={()=> setOpen(true)}><span className="play-icon"></span></a>
+                                    <button className="video-popup position-top-center play__btn size-medium"  onClick={()=> setOpen(true)}><span className="play-icon"></span></button>
                                 </div>
                                 <div className="content">
                                     <div className="inner">
