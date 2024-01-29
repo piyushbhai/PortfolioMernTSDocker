@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Index from './components/Index'
+import Gallery from './components/Gallery'
 // import second from './components/n'
 import { Link } from 'react-router-dom';
 import './App.css';
@@ -34,7 +35,8 @@ function App() {
           <div className="main-page">
              <Header/>
           </div>
-          <Index/>
+          {/* <Index/> */}
+          <Gallery/>
           <Footer/>
 
       {/* </body> */}
