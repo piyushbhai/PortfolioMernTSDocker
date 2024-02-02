@@ -35,8 +35,8 @@ function App() {
           <div className="main-page">
              <Header/>
           </div>
-          {/* <Index/> */}
-          <Gallery/>
+          <Index/>
+          {/* <Gallery/> */}
           <Footer/>
 
       {/* </body> */}

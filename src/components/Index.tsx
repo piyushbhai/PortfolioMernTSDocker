@@ -3,6 +3,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ModalVideo from 'react-modal-video'
 import Modal from 'react-modal';
+import ReactDOM from 'react-dom';
 
 const customStyles = {
     content: {
@@ -23,17 +24,29 @@ interface IAppProps {
 const App: React.FunctionComponent<IAppProps> = (props) => {
     const [isOpen, setOpen] = useState(false)
 
+    
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setOpen(false);
+  }
+
   return (<>
   
   {/* <ModalVideo channel='youtube' isOpen={isOpen}  videoId="PLkaTl15B255crc2ojToWqWLyCrCg63MyE" onClose={() => setOpen(false)} /> */}
 
   <Modal
         isOpen={isOpen}
-        // onAfterOpen={afterOpenModal}
-        // onRequestClose={isOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
       >
+
+
         <iframe width="960" height="400" src="https://www.youtube.com/embed/videoseries?si=EtauhEZLBFoGfl6A&amp;list=PLkaTl15B255crc2ojToWqWLyCrCg63MyE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
       </Modal>
 
@@ -478,7 +491,7 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                         <div className="col-lg-12">
                             <div className="section-title text-center mb--20 mb_sm--0 mb_md--0">
                                 <h2 className="title">My All Works</h2>
-                                <p>My most successful projects are llisted below</p>
+                                <p>My most successful projects are listed below</p>
                             </div>
                         </div>
                     </div>
@@ -492,7 +505,8 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                                 <div className="thumbnail position-relative">
                               
                                     <img className="w-100" src="https://rainbowit.net/html/trydo/assets/images/portfolio/portfolio-big-01.jpg" alt="About Images"/>
-                                    <button className="video-popup position-top-center play__btn size-medium"  onClick={()=> setOpen(true)}><span className="play-icon"></span></button>
+                                    <a href='https://www.youtube.com/playlist?list=PLkaTl15B255crc2ojToWqWLyCrCg63MyE' target="_blank" className="video-popup position-top-center play__btn size-medium"><span className="play-icon"></span></a>
+                                    {/* <button className="video-popup position-top-center play__btn size-medium"  onClick={()=> setOpen(true)}><span className="play-icon"></span></button> */}
                                 </div>
                                 <div className="content">
                                     <div className="inner">
