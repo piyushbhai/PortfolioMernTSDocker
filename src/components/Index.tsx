@@ -4,6 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import ModalVideo from 'react-modal-video'
 import Modal from 'react-modal';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 const customStyles = {
     content: {
@@ -504,21 +505,49 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                             <div className="col-lg-4 col-md-6 col-12">
                                 <div className="thumbnail position-relative">
                               
-                                    <img className="w-100" src="https://rainbowit.net/html/trydo/assets/images/portfolio/portfolio-big-01.jpg" alt="About Images"/>
+                                    <img className="w-100" src="./assets/images/portfolio/thumbnail/trackadmin.png" alt="About Images"/>
                                     <a href='https://www.youtube.com/playlist?list=PLkaTl15B255crc2ojToWqWLyCrCg63MyE' target="_blank" className="video-popup position-top-center play__btn size-medium"><span className="play-icon"></span></a>
                                     {/* <button className="video-popup position-top-center play__btn size-medium"  onClick={()=> setOpen(true)}><span className="play-icon"></span></button> */}
                                 </div>
-                                <div className="content">
+                                <div className="content pt-4">
                                     <div className="inner">
-                                        <h5 className="mb-1">Web Design</h5>
-                                        <h6>T-shirt design is the part of design</h6>
+                                        <h5 className="mb-1">HRMS Tracking Portal</h5>
+                                        <h6>(React, Redux, Mysql, Express Js Api)</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-4 col-md-6 col-12">
+                                <div className="thumbnail position-relative">
+                              
+                                    <img className="w-100" src="./assets/images/portfolio/thumbnail/trackadmin.png" alt="About Images"/>
+                                    <a href='https://www.youtube.com/playlist?list=PLkaTl15B255ee-B6BRQxk508s3JB9wKV-' target="_blank" className="video-popup position-top-center play__btn size-medium"><span className="play-icon"></span></a>                                   
+                                </div>
+                                <div className="content pt-4">
+                                    <div className="inner">
+                                        <h5 className="mb-1" >HRMS Tracking App (Windows, Linux, Mac)</h5>
+                                        <h6>(React, Redux, Electron Mysql, Websocket, sokcet.io, Express Js Api)</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-4 col-md-6 col-12">
+                                <div className="thumbnail position-relative">
+                              
+                                    <img className="w-100" src="./assets/images/portfolio/thumbnail/dialdigits.png" alt="About Images"/>
+                                    <a href='https://www.youtube.com/playlist?list=PLkaTl15B255eWPOpIPISjsyvlwNQ06Z8D' target="_blank" className="video-popup position-top-center play__btn size-medium"><span className="play-icon"></span></a>                                   
+                                </div>
+                                <div className="content pt-4">
+                                    <div className="inner">
+                                        <h5 className="mb-1" >Dialdigits (VOIP - IVR call Management)</h5>
+                                        <h6>(Angular, Codeigniter 3 Api)</h6>
                                     </div>
                                 </div>
                             </div>
                             
     
                             
-                            <div className="col-lg-4 col-md-6 col-12 mt_sm--30">
+                            {/* <div className="col-lg-4 col-md-6 col-12 mt_sm--30">
                                 <div className="thumbnail position-relative">
                                     <img className="w-100" src="https://rainbowit.net/html/trydo/assets/images/portfolio/portfolio-big-02.jpg" alt="About Images"/>
                                     <a className="video-popup position-top-center black-color play__btn size-medium" href="https://www.youtube.com/watch?v=ctsT5Y-InqE&amp;ab_channel=Rainbow-Themes"><span className="play-icon"></span></a>
@@ -532,15 +561,23 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                                     <img className="w-100" src="https://rainbowit.net/html/trydo/assets/images/portfolio/portfolio-big-03.jpg" alt="About Images"/>
                                     <a className="video-popup position-top-center black-color play__btn size-medium" href="https://www.youtube.com/watch?v=ctsT5Y-InqE&amp;ab_channel=Rainbow-Themes"><span className="play-icon"></span></a>
                                 </div>
-                            </div>
+                            </div> */}
                             
     
                         </div>
                     </div>
                 </div>
 
+                <div className="row">
+                    <div className="col-lg-12">
+                    <div className="view-more-btn mt--60 mt_sm--30 text-center">
+                        <Link className="rn-button-style--2 btn_solid btn-size-sm"  to="/portfolio">View More Projects</Link> &nbsp;
+                        <a className="rn-button-style--2 btn_solid btn-size-sm" target="_blank" href="https://gitlab.com/piyushprajapati/myportfolio">View More(Git Link)</a>
+                    </div>
+                    </div>
+                    </div>                
             
-            <div className="rn-gallery-area rn-section-gap bg_color--1 line-separator">
+            {/* <div className="rn-gallery-area rn-section-gap bg_color--1 line-separator">
                 <div className="container">
                     <div className="gallery-wrapper gallery-grid row mt_dec--60" id="animated-thumbnials">
 
@@ -662,7 +699,7 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                         </div>
                         </div>
                 </div>
-            </div>
+            </div> */}
             
                </div>
             </div>

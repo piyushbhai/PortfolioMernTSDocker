@@ -5,9 +5,9 @@ interface IHeaderProps {
 }
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
-    // let params = useParams();
-    // console.log(window.location.pathname);
-    let [path,] = React.useState(window.location.pathname);
+    let params = useParams();
+    console.log(params);
+    
   return (
     <>
        
@@ -21,7 +21,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
                     </div>
                     <nav className="mainmenunav d-lg-block ml--50">
                         <div className="navbar-example2">
-                           {path!='/portfolio'? 
+                            
                             <ul className="mainmenu nav nav-pills">
                                 <li className="nav-item">
                                     <a className="nav-link smoth-animation active" href="#home">Home</a>
@@ -42,11 +42,6 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
                                     <a className="nav-link smoth-animation" href="#contact">Contact</a>
                                 </li>
                             </ul>
-                            : <ul className="mainmenu nav nav-pills">
-                            <li className="nav-item">
-                                <Link className="nav-link smoth-animation active" to="/">Home</Link>
-                            </li>                                                   
-                        </ul>}
                             
                         </div>
                     </nav>

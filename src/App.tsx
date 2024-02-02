@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from './components/Header'
+import HeaderPage from './components/Header-page'
 import Footer from './components/Footer'
 import Index from './components/Index'
 import Gallery from './components/Gallery'
 // import second from './components/n'
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom'
 
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-        
+        <BrowserRouter>
       {/* <body className="position-relative spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150"> */}
           <div id="my_switcher" className="my_switcher">
               <ul>
@@ -35,11 +37,17 @@ function App() {
           <div className="main-page">
              <Header/>
           </div>
-          <Index/>
+          
+          <Routes>
+                <Route path="/" element={<Index/>}/>
+                <Route path="/portfolio" element={<Gallery/>}/>
+          </Routes>
+          
           {/* <Gallery/> */}
           <Footer/>
 
       {/* </body> */}
+      </BrowserRouter>
     </div>
   );
 }
