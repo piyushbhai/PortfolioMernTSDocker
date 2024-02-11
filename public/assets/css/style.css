@@ -17002,7 +17002,7 @@ BLog Details Styles
 }
 
 .active-dark .header-area.header--sticky.sticky .header-wrapper .mainmenunav ul.mainmenu > li > a {
-  color: #ffffff;
+  color: #000;
 }
 
 .active-dark .bg_image--3,

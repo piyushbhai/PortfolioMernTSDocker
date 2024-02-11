@@ -24,16 +24,16 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
                             
                             <li><a target="_blank" href="https://www.linkedin.com/in/piyushprajapati16"><i className="fab fa-linkedin-in"></i></a></li>
                             <li><a target="_blank" href="mailto:prajapati.piyush16@gmail.com"><i className="fa fa-envelope"></i></a></li>
-                            <li><a target="_blank" href="https://gitlab.com/piyushprajapati"><i className="fab fa-gitlab"></i></a></li>
-                            <li><a target="_blank" href="#"><i className="fab fa-medium"></i></a></li>
-                            <li><a target="_blank" href="#"><i className="fab fa-stack-overflow"></i></a></li>
+                            {/* <li><a target="_blank" href="https://gitlab.com/piyushprajapati"><i className="fab fa-gitlab"></i></a></li> */}
+                            {/* <li><a target="_blank" href="#"><i className="fab fa-medium"></i></a></li>
+                            <li><a target="_blank" href="#"><i className="fab fa-stack-overflow"></i></a></li> */}
                             {/* <!-- <li><a target="_blank" href="https://twitter.com/piyushbhai10"><i className="fab fa-twitter"></i></a></li> --> */}
                             {/* <!-- <li><a target="_blank" href="https://www.instagram.com/piyush_h_prajapati/"><i className="fab fa-instagram"></i></a></li> --> */}
                             <li><a target="_blank" href="https://www.hackerrank.com/profile/ppiyushh16"><i className="fab fa-hackerrank"></i></a></li>
                             <li><a className='text-white' target="_blank" href="https://leetcode.com/piyushprajapati16/">
                                 <img  src="./assets/images/icon/leetcode (2).svg" alt="" />
                             </a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/piyushbhai321"><i className="fab fa-facebook-f"></i></a></li>
+                            {/* <li><a target="_blank" href="https://www.facebook.com/piyushbhai321"><i className="fab fa-facebook-f"></i></a></li> */}
                             </ul>
                         </div>
                     </div>

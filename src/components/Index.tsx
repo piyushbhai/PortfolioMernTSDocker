@@ -485,7 +485,7 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
             </div>
             <hr/><br/>
            
-           <div className="rn-portfolio-area rn-section-gap bg_color--1">
+           <div className="rn-portfolio-area rn-section-gap bg_color--1" id='portfolio'>
             <div className="portfolio-sacousel-inner pb--30">
                 <div className="container">
                     <div className="row">
@@ -719,7 +719,7 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                                         <a href="mailto:prajapati.piyush16@gmail.com"> prajapati.piyush16@gmail.com</a> </p>
                                 </div>
                                 <div className="form-wrapper">
-                                    <form action="mail.php" method="POST">
+                                    <form  method="POST">
                                         <label htmlFor="item01">
                                             <input type="text" name="name" id="item01" placeholder="Your Name *" />
                                         </label>
@@ -739,7 +739,7 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
                                 </div>
                             </div>
                             <div className="col-lg-6 order-1 order-lg-2">
-                                <div className="thumbnail mb_md--30 mb_sm--30">
+                                <div className="mb_md--30 mb_sm--30">
                                     <img src="assets/images/about/about-piyush.png" width="600px" height="600px" alt="trydo" />
                                 </div>
                             </div>

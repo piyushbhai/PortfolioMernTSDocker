@@ -24,23 +24,9 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
                             
                             <ul className="mainmenu nav nav-pills">
                                 <li className="nav-item">
-                                    <a className="nav-link smoth-animation active" href="#home">Home</a>
+                                    <Link to="/">Home</Link>
                                 </li>
-                                <li>
-                                    <a className="nav-link smoth-animation" href="#about">About</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link smoth-animation" href="#skills">Skills</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link smoth-animation" href="#portfolio">Portfolio</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link smoth-animation" href="#blog">Blog</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link smoth-animation" href="#contact">Contact</a>
-                                </li>
+                              
                             </ul>
                             
                         </div>

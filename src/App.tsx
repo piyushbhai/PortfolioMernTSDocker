@@ -34,13 +34,17 @@ function App() {
                   </li>
               </ul>
           </div>
-          <div className="main-page">
-             <Header/>
-          </div>
+          
           
           <Routes>
-                <Route path="/" element={<Index/>}/>
-                <Route path="/portfolio" element={<Gallery/>}/>
+                <Route path="/" element={<>
+                    <div className="main-page">
+                    <Header/>
+                </div>
+                <Index/></>}/>
+                <Route path="/portfolio" element={<><div className="main-page">
+             <HeaderPage/>
+          </div><Gallery/></>}/>
           </Routes>
           
           {/* <Gallery/> */}
