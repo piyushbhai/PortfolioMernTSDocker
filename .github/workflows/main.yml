@@ -1,5 +1,4 @@
 name: Portfolio Action
-description: Deploy Dev Prod
 
 on:
   workflow_dispatch:
