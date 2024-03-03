@@ -1,25 +1,45 @@
-name: Portfolio Action
+name: Piyush Portfolio
 
+# on:
+#   push:
+#     branches:
+#       - main
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
 on:
   workflow_dispatch:
-      
+     
 jobs:
   web-deploy:
 
-    name: Deploy Node Dev App
+    name: Deploy Portfolio App
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.0.0]
 
     steps:
     - name: Get latest code
       uses: actions/checkout@v2.3.2
-  
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+     
+    - name: Install NPM Modules
+      run: npm install
+
+    - name: Build Project
+      run: CI= npm run build 
+ 
     - name: Install SSH key
       uses: shimataro/ssh-key-action@v2
       with:
-        source_dir: ./build
         key: ${{ secrets.PIYUSH_PORTFOLIO }}
         known_hosts: ${{ secrets.SSH_HOST }}
         if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
-        
-    - name: deploy backend
+   
+    - name: deploy build
       run: rsync -rva --rsh="ssh" * ubuntu@65.0.29.124:/var/www/piyushprajapati/html && ssh ubuntu@65.0.29.124 'cd /var/www/piyushprajapati/html'
