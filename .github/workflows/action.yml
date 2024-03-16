@@ -1,5 +1,5 @@
 name: Portfolio Action
-description: Deploy Dev Prod
+# description: Deploy Dev Prod
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
     - name: Install SSH key
       uses: shimataro/ssh-key-action@v2
       with:
-        source_dir: ./build
+        # source_dir: ./build
         key: ${{ secrets.PIYUSH_PORTFOLIO }}
         known_hosts: ${{ secrets.SSH_HOST }}
         if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
