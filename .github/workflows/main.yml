@@ -52,3 +52,5 @@ jobs:
       # run: rsync -rva --rsh="ssh" build/* ubuntu@65.0.29.124:/var/www/piyushprajapati/html && ssh ubuntu@65.0.29.124 'cd /var/www/piyushprajapati/html'
       # -p2022
       # run: rsync -rva --rsh="ssh" * ubuntu@65.0.29.124:/var/www/piyushprajapati/html && ssh ubuntu@65.0.29.124 'cd /var/www/piyushprajapati/html'
+
+      
