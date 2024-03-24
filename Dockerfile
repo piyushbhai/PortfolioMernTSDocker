@@ -17,7 +17,7 @@ RUN npm run build
 
 # Serve with Nginx
 FROM nginx:1.23-alpine
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/piyushprajapati/html
 RUN rm -rf *
 COPY --from=build /app/build .
 EXPOSE 80
